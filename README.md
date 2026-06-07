@@ -56,10 +56,18 @@ npm run dev
 Crea un file `.env` nella cartella backend con:
 
 ```
-MONGO_URI=la_tua_stringa_mongodb
+MONGO_URI=la_tua_stringa_di_connessione_mongodb
 PORT=5000
-JWT_SECRET=una_chiave_segreta
+JWT_SECRET=una_chiave_segreta_a_tua_scelta
 ```
+
+Per ottenere la stringa di connessione MongoDB:
+1. Registrati su [mongodb.com/atlas](https://mongodb.com/atlas) — è gratuito
+2. Crea un nuovo cluster gratuito
+3. Vai su **Database Access** e crea un utente con username e password
+4. Vai su **Connect** → **Drivers** → copia la stringa di connessione
+5. Sostituisci `<password>` con la password che hai appena creato
+6. Incollala come valore di `MONGO_URI` nel file `.env`
 
 **Avvia il frontend:**
 
